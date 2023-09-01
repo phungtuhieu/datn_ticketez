@@ -1,0 +1,263 @@
+.title-left-carousel {
+    margin-top: 140px;
+}
+
+.title-left-carousel>.title-name {
+    background-image: url(https://wordpress.iqonic.design/product/wp/streamit/wp-content/themes/streamit-theme/assets/images/redux/texure.jpg);
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 54px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.title-des {
+    color: #d1d0cf;
+    max-height: 100px;
+    /* Độ cao tối đa của văn bản */
+    overflow: hidden;
+}
+
+.viewDesCarousel {
+    cursor: pointer;
+}
+
+.title-right {
+    margin-top: 200px;
+}
+
+.title-right-name {
+    font-weight: 100px;
+}
+
+.title-right-name:hover {
+    color: red;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-togglee:active {
+
+    pointer-events: none;
+}
+
+.dropdown:hover>.dropdown-togglee .fa-chevron-down {
+    transform: rotate(-180deg);
+}
+
+.btnWatchCarousle {
+    padding: 0.8em 1.8em;
+    box-shadow: 0 0 0 2px #ffffff;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s;
+    z-index: 1;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.btnWatchCarousle::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: red;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+
+}
+
+.btnWatchCarousle:hover::before {
+    width: 100%;
+
+}
+
+
+/* custom button logo nav */
+.buttonLogoNav {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+.buttonLogoNav {
+    --border-right: 6px;
+    --animation-color: #E63946;
+    --fs-size: 15px;
+    /* Updated font size */
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    position: relative;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    color: black;
+}
+
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.buttonLogoNav:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+/* xử lý stick top thẻ nav */
+.navbar {
+    background-color: transparent;
+    /* Thay đổi thành màu đục */
+    backdrop-filter: blur(15px);
+}
+
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar.scrolled {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled .nav-link {
+    color: black;
+}
+
+/* xử lý nút xem trailer caroulsel */
+.lazy-youtube {
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.3%;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.lazy-youtube img {
+    width: 100%;
+    top: -16.84%;
+    left: 0;
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+.lazy-youtube iframe {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.lazy-youtube .playBut {
+    display: inline-block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    top: 50%;
+    left: 30%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.lazy-youtube .playBut svg {
+    width: inherit;
+    height: inherit;
+}
+
+.lazy-youtube .playBut .svg-play {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: 7;
+}
+
+.lazy-youtube .circle {
+    stroke: rgba(255, 11, 11, 0.8);
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 0.3;
+}
+
+.lazy-youtube .triangle {
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+
+.lazy-youtube .playBut:hover .triangle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: red;
+    animation: nudge 0.7s ease-in-out;
+    -webkit-animation: nudge 0.7s ease-in-out;
+}
+
+.lazy-youtube .playBut:hover .circle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: red;
+}
+
+.iklan-atas+.widget,
+.iklan-bawah+.widget,
+.post-entry .widget {
+    margin: 30px 0;
+}
+
+.lazy-youtube .playText {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+    white-space: nowrap;
+    /* Ngăn text xuống dòng */
+    margin-left: 80px;
+    font-size: 18px;
+    letter-spacing: 3.84912px;
+    line-height: 26.4px;
+    text-transform: uppercase;
+}
+
+.lazy-youtube .playBut .svg-play {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: 7;
+    transition: stroke 0.3s ease;
+    font-weight: bold;
+    /* Thêm hiệu ứng chuyển đổi màu */
+}

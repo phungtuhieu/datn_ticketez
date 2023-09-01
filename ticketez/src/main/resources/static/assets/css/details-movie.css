@@ -1,0 +1,228 @@
+.img-poster-details {
+  background-color: black;
+  filter: brightness(0.3);
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.img-details {
+  border: 1px solid #afacac;
+  border-radius: 5px;
+  margin-top: 30px;
+  filter: brightness(0.8);
+}
+
+.title-des {
+  color: #d1d0cf;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.viewDesCarousel {
+  cursor: pointer;
+}
+
+.img-details-video {
+  position: relative;
+  display: inline-block;
+}
+
+/* custom icon xem video */
+.lazy-youtube {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.lazy-youtube img {
+  width: 100%;
+  top: -16.84%;
+  left: 0;
+  opacity: 0.95;
+  cursor: pointer;
+
+}
+
+.lazy-youtube .play-button,
+.lazy-youtube .play-button:before {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+
+}
+
+.lazy-youtube iframe {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.lazy-youtube .playBut {
+  display: inline-block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.lazy-youtube .playBut svg {
+  width: inherit;
+  height: inherit;
+}
+
+.lazy-youtube .playBut .svg-play {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-width: 7;
+}
+
+.lazy-youtube .circle {
+  stroke: rgb(255, 255, 255);
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+.lazy-youtube .triangle {
+  stroke: rgb(255, 255, 255);
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
+
+.lazy-youtube .playBut:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #fefefe;
+  animation: nudge 0.7s ease-in-out;
+  -webkit-animation: nudge 0.7s ease-in-out;
+}
+
+.lazy-youtube .playBut:hover .circle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #fefefe;
+}
+
+.iklan-atas+.widget,
+.iklan-bawah+.widget,
+.post-entry .widget {
+  margin: 30px 0;
+}
+
+.lazy-youtube .playBut .bold-icon {
+  width: inherit;
+  height: inherit;
+  display: block;
+  transform: translate(-50%, -50%);
+  /* Để căn giữa hình ảnh in đậm */
+}
+
+/* rating */
+.rating-start {
+  color: #FBD83A;
+}
+
+.rating-feedback {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png");
+}
+
+.rating {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  height: 150px;
+  position: relative;
+}
+
+.rating-0 {
+  filter: grayscale(100%);
+}
+
+.rating>input {
+  display: none;
+}
+
+.rating>label {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23e3e3e3' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 76%;
+  transition: 0.3s;
+}
+
+.rating>input:checked~label,
+.rating>input:checked~label~label {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23fcd93a' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+}
+
+.rating>input:not(:checked)~label:hover,
+.rating>input:not(:checked)~label:hover~label {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23d8b11e' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+}
+
+.emoji-wrapper {
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emoji-wrapper:before,
+.emoji-wrapper:after {
+  content: "";
+  height: 15px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.emoji-wrapper:before {
+  top: 0;
+  background: linear-gradient
+}
+
+.form-outline-newcomments {
+  margin-top: -10px;
+}
+
+.name-movieplay {
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 15px;
+  font-weight: 600;
+}
