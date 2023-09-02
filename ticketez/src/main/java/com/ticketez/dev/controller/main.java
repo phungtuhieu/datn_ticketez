@@ -1,11 +1,12 @@
-package com.ticketez.controller;
+package com.ticketez.dev.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class IndexController {
-    @RequestMapping("/index")
+public class main {
+
+	@RequestMapping("/index")
 	public String index() {
 		return "/index";
 	}
@@ -19,5 +20,4 @@ public class IndexController {
 	public String more() {
 		return "/views/more-movies";
 	}
-
 }
