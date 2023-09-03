@@ -3,8 +3,9 @@ package com.ticketez.dev.booking;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ticketez.dev.account.Account;
-import com.ticketez.dev.discount.Discount;
+import com.ticketez.dev.discountBooking.DiscountsBooking;
 import com.ticketez.dev.paymentInfo.PaymentInfo;
 import com.ticketez.dev.seatBooking.SeatBooking;
 import com.ticketez.dev.serviceBooking.ServiceBooking;
@@ -15,7 +16,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -37,15 +37,16 @@ public class Booking {
 	private Showtime showtime;
 
 	@OneToMany(mappedBy = "booking")
+	@JsonIgnore
 	private List<SeatBooking> seatsBookings;
 
-	@ManyToOne
-	@JoinColumn(name = "discount_id")
-	private Discount discount;
+	@OneToMany(mappedBy = "booking")
+	@JsonIgnore
+	private List<DiscountsBooking> discountsBookings;
 
 	@OneToMany(mappedBy = "booking")
 	private List<ServiceBooking> servicesBookings;
 
-	@OneToOne(mappedBy = "booking")
-	private PaymentInfo paymentInfo;
+	@OneToMany(mappedBy = "booking")
+	private List<PaymentInfo> paymentInfos;
 }
