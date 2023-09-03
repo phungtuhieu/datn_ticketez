@@ -36,7 +36,7 @@ public class Movie {
 	private Time duration;
 	private Date releaseDate;
 	private String country;
-	private float rating;
+	private Float rating;
 
 	@ManyToOne
 	@JoinColumn(name = "movie_studio_id")
