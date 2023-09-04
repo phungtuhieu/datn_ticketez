@@ -1,5 +1,7 @@
 package com.ticketez.dev.showtime;
 
-public class ShowtimeDAO {
-         
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ShowtimeDAO extends JpaRepository<Showtime, Long> {
+
 }

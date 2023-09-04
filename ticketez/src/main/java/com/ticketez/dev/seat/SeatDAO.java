@@ -1,5 +1,7 @@
 package com.ticketez.dev.seat;
 
-public class SeatDAO {
-         
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SeatDAO extends JpaRepository<Seat, Long> {
+
 }

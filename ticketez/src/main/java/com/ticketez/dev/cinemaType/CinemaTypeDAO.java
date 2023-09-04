@@ -1,5 +1,7 @@
 package com.ticketez.dev.cinemaType;
 
-public class CinemaTypeDAO {
-         
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CinemaTypeDAO extends JpaRepository<CinemaType, Long> {
+
 }
