@@ -3,6 +3,7 @@ package com.ticketez.dev.directorMovie;
 import com.ticketez.dev.director.Director;
 import com.ticketez.dev.movie.Movie;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,15 +17,14 @@ import lombok.Data;
 @Table(name = "Directors_Movies")
 @Data
 public class DirectorMovie {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	@EmbeddedId
+	DirectorMoviePK directorMoviePK;
 
 	@ManyToOne
-	@JoinColumn(name = "director_id")
+	@JoinColumn(name = "director_id", insertable = false, updatable = false)
 	private Director director;
 
 	@ManyToOne
-	@JoinColumn(name = "movie_id")
+	@JoinColumn(name = "movie_id", insertable = false, updatable = false)
 	private Movie movie;
 }
